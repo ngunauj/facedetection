@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(facedetection)
+project(face_detection)
 
 ## Add support for C++11, supported in ROS Kinetic and newer
 # add_definitions(-std=c++11)
@@ -202,5 +202,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(showImage src/camera_publisher.cpp)
-target_link_libraries(showImage ${catkin_LIBRARIES})
+add_executable(detectFace src/camera_subscribe)
+target_link_libraries(detectFace ${catkin_LIBRARIES})
