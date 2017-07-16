@@ -100,7 +100,7 @@ void img_Callback(const sensor_msgs::ImageConstPtr& msg) {
 	else printf("no image!");
 }
 int main(int argc, char *argv[]) { 
-	ros::init(argc, argv, "img_subscribe");
+	ros::init(argc, argv, "detectFace");
 	ros::NodeHandle nh;
 	namedWindow("webcamimg");
 	startWindowThread();/*
