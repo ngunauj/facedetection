@@ -91,8 +91,7 @@ void img_Callback(const sensor_msgs::ImageConstPtr& msg) {
 		detectFace(image, cascade, nestedCascade);
 		//Convert an immutable sensor_msgs::Image message to an OpenCV-compatible CvImage, 
 		//sharing the image data if possible. 
-		//imshow("img", cv_bridge::toCvShare(msg, "bgr8")->image);//IplImage 类型的 mat
-		//waitKey(1);
+		//imshow("img", cv_bridge::toCvShare(msg, "bgr8")->image);//mat
 	} catch (cv_bridge::Exception &e) {
 		ROS_ERROR("Could not convert from '%s' to 'bgr8'.", msg->encoding.c_str());
 	}
